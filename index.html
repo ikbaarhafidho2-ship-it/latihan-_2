@@ -1,74 +1,80 @@
-<html>
-    <head>
-        <title>Halaman Login</title>
-        <style>
-          *{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-body{
-    height: 100hv;
-    background-image: url(https://bit.ly/2FPT1J9);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+      * {
+  box-sizing: border-box;
 }
 
-.container{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px 25px;
-    width: 300px;
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* tengah secara horizontal */
+  align-items: center;     /* tengah secara vertikal */
+  background: url("gambar.jpg") no-repeat center center / cover;
+  font-family: Arial, sans-serif;
+}
 
-    background-color: rgba(0,0,0,.7);
-    box-shadow: 0 0 10px rgba(255,255,255,.3);
+.login-box {
+  width: 320px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #222;
 }
-.container h1{
-    text-align: left;
-    color: #fafafa;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    border-bottom: 4px solid #2979ff;
-}
-.container label{
-    text-align: left;
-    color: #90caf9;
-}
-.container form input{
-    width: calc(100% - 20px);
-    padding: 8px 10px;
-    margin-bottom: 15px;
-    border: none;
-    background-color: transparent;
-    border-bottom: 2px solid #2979ff;
-    color: #fff;
-    font-size: 20px;
-}
-.container form button{
-    width: 100%;
-    padding: 5px 0;
-    border: none;
-    background-color: #2979ff;
-    font-size: 18px;
-    color: #fafafa;
-}
-          </style>
-    </head>
 
-    <body>
-        <div calss="container">
-            <h1>Login</h1>
-            <form>
-                <label>Username</label><br>
-                <input type="text"><br>
-                <label>Password</label><br>
-                <input type="password"><br>
-                <button>Log in</button>
-            </form>
-        </div>
-    </body>
+.login-box h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.login-box label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2e7d32;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #1b5e20;
+}
+      </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>Login</h1>
+    <form>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+
+      <button type="submit">Log in</button>
+    </form>
+  </div>
+</body>
 </html>
